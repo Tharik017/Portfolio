@@ -19,9 +19,32 @@ def load_lottieurl(url):
 #assets
 lottie_coding=load_lottieurl("https://lottie.host/28785e1d-98c4-4616-8b78-e0da2c9afe6c/m79m8uNtFp.json")
 lottie_code=load_lottieurl("https://lottie.host/39c705ef-04a4-4d2a-ad08-7e9221028e72/NZ43eclJnH.json")
-image1=Image.open("pro 3.GIF")
-img2=Image.open("pro2.JPG")
-img3=Image.open("pro1.JPG")
+file_path = "pro 3.gif"
+file_path2 = "pro2.jpg"
+file_path3 = "pro1.jpg"
+try:
+    image1 = Image.open(file_path)
+    image1.show()  # Optional: To display the image if successful
+except FileNotFoundError:
+    print(f"File {file_path} not found.")
+except Exception as e:
+    print(f"An error occurred: {e}")
+
+try:
+    image2 = Image.open(file_path2)
+    image2.show()  # Optional: To display the image if successful
+except FileNotFoundError:
+    print(f"File {file_path} not found.")
+except Exception as e:
+    print(f"An error occurred: {e}")
+
+try:
+    image3 = Image.open(file_path3)
+    image3.show()  # Optional: To display the image if successful
+except FileNotFoundError:
+    print(f"File {file_path} not found.")
+except Exception as e:
+    print(f"An error occurred: {e}")
 
 st.write("##")
 st.subheader("Hey Guys!:wave:")
