@@ -134,7 +134,7 @@ if selected=='Projects':
         col5,col6=st.columns((1,2))
         with col5:
             st.subheader("Plant Disease Identification")
-            st.image(image1)
+            st.image(file_path)
             st.write("---")
             st.write("###")
         with col6:
