@@ -74,14 +74,26 @@ if selected=='About':
                      Graduate with an aptitude for aptitude and passion for Continuous Learning.
                      Eager to contribute to collaborative and impactful Software development projects and drive innovation in field""")
             st.subheader("Resume")
-            file_path = "web/Mohamed Tharik.PDF"
-            with open(file_path, "rb") as file:
-                st.download_button(
-                    label="Download File",
-                    data=file,
-                    file_name="Mohamed Tharik.PDF",
-                    #mime="text/plain"  # Adjust MIME type based on your file
-                )
+            file_path = 'Mohamed Tharik.PDF'
+            def get_file(file_path):
+                with open(file_path, 'rb') as file:
+                    return file.read()
+
+            def main():
+                st.title("File Download Example")
+                if os.path.exists(file_path):
+                    st.write("Click the button below to download the file:")
+                    # Get the file data
+                    file_data = get_file(file_path)
+                    # Create a download button
+                    st.download_button(
+                    label="Download PDF",
+                    data=file_data,
+                    file_name="Mohamed_Tharik.pdf",
+                    mime="application/pdf"
+                    )
+                else:
+                    st.error("File not found.")
 
         with col2:
             st_lottie(lottie_coding, height=300)
@@ -136,7 +148,7 @@ if selected=='Projects':
             st.write("###")
         with col5:
             st.subheader("Online Grocery Store")
-            st.image(img2)
+            st.image(image2)
             st.write("---")
             st.write("###")
         with col6:
@@ -153,7 +165,7 @@ if selected=='Projects':
 
         with col5:
             st.subheader("Eye Bank Management")
-            st.image(img3)
+            st.image(image3)
             st.write("---")
             st.write("#####")
 
