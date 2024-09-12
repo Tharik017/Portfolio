@@ -75,7 +75,7 @@ if selected=='About':
                      Eager to contribute to collaborative and impactful Software development projects and drive innovation in field""")
             st.subheader("Resume")
             file_path4 = "Mohamed Tharik.pdf"
-             with open(file_path4, 'rb') as file:
+            with open(file_path4, 'rb') as file:
                 # Create a download button
                 st.download_button(
                 label="Download PDF",
