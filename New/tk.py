@@ -22,7 +22,7 @@ lottie_coding=load_lottieurl("https://lottie.host/28785e1d-98c4-4616-8b78-e0da2c
 lottie_code=load_lottieurl("https://lottie.host/39c705ef-04a4-4d2a-ad08-7e9221028e72/NZ43eclJnH.json")
 
 try:
-    image1 = Image.open("pro 3.gif")
+    image1 = Image.open("New/web/pro 3.gif")
 except FileNotFoundError:
     print("The file was not found.")
 except IOError:
@@ -30,14 +30,14 @@ except IOError:
 
 
 try:
-    image2 = Image.open("pro2.jpg")
+    image2 = Image.open("New/web/pro2.jpg")
 except FileNotFoundError:
     print("The file was not found.")
 except IOError:
     print("Error occurred while opening the file.")
 
 try:
-    image3 = Image.open("pro1.jpg")
+    image3 = Image.open("New/web/pro1.jpg")
 except FileNotFoundError:
     print("The file was not found.")
 except IOError:
