@@ -80,7 +80,6 @@ if selected=='About':
             base_dir = os.path.dirname(__file__)  # Get the directory of the script
             file_path = os.path.join(base_dir, "Mohamed Tharik.pdf")  # Construct the file path
 
-            with open(file_path, "rb") as file:
                 
             file_path = "Mohamed Tharik.pdf"
 
@@ -100,10 +99,10 @@ if selected=='About':
         
         with col2:
             st_lottie(lottie_coding, height=300)
-    st.write("---")
+            st.write("---")
 
-    with st.container():
-        col3,col4=st.columns(2)
+        with st.container():
+            col3,col4=st.columns(2)
         with col3:
             st.header("Education-College")
             
