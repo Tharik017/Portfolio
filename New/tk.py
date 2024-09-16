@@ -81,17 +81,17 @@ if selected=='About':
             file_path = os.path.join(base_dir, "Mohamed Tharik.pdf")  # Construct the file path
 
             with open(file_path, "rb") as file:
-                st.download_button(
+                
+            file_path = "Mohamed Tharik.pdf"
+
+            try:
+                with open(file_path, "rb") as file:
+                    st.download_button(
                     label="Download File",
                     data=file,
                     file_name="Mohamed Tharik.pdf",
                     #mime="text/plain"  # Adjust MIME type based on your file
                 )
-            file_path = "path/to/your/file"
-
-            try:
-                with open(file_path, "rb") as file:
-                    # Your code here
             except FileNotFoundError:
                 print(f"File not found: {file_path}")
             except IOError as e:
