@@ -135,7 +135,10 @@ if selected=='Projects':
         col5,col6=st.columns((1,2))
         with col5:
             st.subheader("Plant Disease Identification")
-            st.image(image1)
+            if 'image1' in locals():
+                st.image(image1)
+            else:
+                st.warning("Image not loaded.")
             st.write("---")
             st.write("###")
         with col6:
@@ -150,7 +153,10 @@ if selected=='Projects':
             st.write("###")
         with col5:
             st.subheader("Online Grocery Store")
-            st.image(img2)
+            if 'image2' in locals():
+                st.image(image2)
+            else:
+                st.warning("Image not loaded.")
             st.write("---")
             st.write("###")
         with col6:
@@ -167,7 +173,10 @@ if selected=='Projects':
 
         with col5:
             st.subheader("Eye Bank Management")
-            st.image(img3)
+            if 'image3' in locals():
+                st.image(image3)
+            else:
+                st.warning("Image not loaded.")
             st.write("---")
             st.write("#####")
 
