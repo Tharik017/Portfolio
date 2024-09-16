@@ -4,7 +4,6 @@ from streamlit_lottie import st_lottie
 import requests
 from PIL import Image
 import base64
-import os
 
 st.set_page_config(page_title="Tharik", page_icon=":tada:", layout="wide")
 
@@ -20,32 +19,9 @@ def load_lottieurl(url):
 #assets
 lottie_coding=load_lottieurl("https://lottie.host/28785e1d-98c4-4616-8b78-e0da2c9afe6c/m79m8uNtFp.json")
 lottie_code=load_lottieurl("https://lottie.host/39c705ef-04a4-4d2a-ad08-7e9221028e72/NZ43eclJnH.json")
-file_path = "pro 3.gif"
-file_path2 = "pro2.jpg"
-file_path3 = "pro1.jpg"
-try:
-    image1 = Image.open(file_path)
-    image1.show()  # Optional: To display the image if successful
-except FileNotFoundError:
-    print(f"File {file_path} not found.")
-except Exception as e:
-    print(f"An error occurred: {e}")
-
-try:
-    image2 = Image.open(file_path2)
-    image2.show()  # Optional: To display the image if successful
-except FileNotFoundError:
-    print(f"File {file_path} not found.")
-except Exception as e:
-    print(f"An error occurred: {e}")
-
-try:
-    image3 = Image.open(file_path3)
-    image3.show()  # Optional: To display the image if successful
-except FileNotFoundError:
-    print(f"File {file_path} not found.")
-except Exception as e:
-    print(f"An error occurred: {e}")
+image1=Image.open("web/pro 3.GIF")
+img2=Image.open("web/pro2.JPG")
+img3=Image.open("web/pro1.JPG")
 
 st.write("##")
 st.subheader("Hey Guys!:wave:")
@@ -75,26 +51,14 @@ if selected=='About':
                      Graduate with an aptitude for aptitude and passion for Continuous Learning.
                      Eager to contribute to collaborative and impactful Software development projects and drive innovation in field""")
             st.subheader("Resume")
-            file_path4 = "Mohamed Tharik.pdf"
-            def get_file(file_path4):
-                 with open(file_path4, 'rb') as file:
-                    return file.read()
-            def main():
-                st.title("File Download Example")
-                if os.path.exists(file_path4):
-                    st.write("Click the button below to download the file:")
-                    # Get the file data
-                    file_data = get_file(file_path4)
-                    # Create a download button
-                    st.download_button(
-                    label="Download PDF",
-                    data=file_data,
-                    file_name="Mohamed_Tharik.pdf",
-                    mime="application/pdf"
-                    )
-                else:
-                    st.error("File not found.")
-
+            file_path = "web/Mohamed Tharik.PDF"
+            with open(file_path, "rb") as file:
+                st.download_button(
+                    label="Download File",
+                    data=file,
+                    file_name="Mohamed Tharik.PDF",
+                    #mime="text/plain"  # Adjust MIME type based on your file
+                )
 
         with col2:
             st_lottie(lottie_coding, height=300)
@@ -149,7 +113,7 @@ if selected=='Projects':
             st.write("###")
         with col5:
             st.subheader("Online Grocery Store")
-            st.image(image2)
+            st.image(img2)
             st.write("---")
             st.write("###")
         with col6:
@@ -166,7 +130,7 @@ if selected=='Projects':
 
         with col5:
             st.subheader("Eye Bank Management")
-            st.image(image3)
+            st.image(img3)
             st.write("---")
             st.write("#####")
 
