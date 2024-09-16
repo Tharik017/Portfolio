@@ -3,6 +3,7 @@ from streamlit_option_menu import option_menu
 from streamlit_lottie import st_lottie
 import requests
 from PIL import Image
+import os
 import base64
 
 st.set_page_config(page_title="Tharik", page_icon=":tada:", layout="wide")
@@ -70,7 +71,15 @@ if selected=='About':
                      Graduate with an aptitude for aptitude and passion for Continuous Learning.
                      Eager to contribute to collaborative and impactful Software development projects and drive innovation in field""")
             st.subheader("Resume")
-            file_path = "web/Mohamed Tharik.PDF"
+            file_path = "web/Mohamed Tharik.PDF"  # Replace with your actual file path
+            if os.path.exists(file_path):
+                print("File exists.")
+            else:
+                print("File does not exist.")
+            print(f"Current working directory: {os.getcwd()}")
+            base_dir = os.path.dirname(__file__)  # Get the directory of the script
+            file_path = os.path.join(base_dir, "web/Mohamed Tharik.PDF")  # Construct the file path
+
             with open(file_path, "rb") as file:
                 st.download_button(
                     label="Download File",
@@ -78,7 +87,17 @@ if selected=='About':
                     file_name="Mohamed Tharik.PDF",
                     #mime="text/plain"  # Adjust MIME type based on your file
                 )
+            file_path = "path/to/your/file"
 
+            try:
+                with open(file_path, "rb") as file:
+                    # Your code here
+            except FileNotFoundError:
+                print(f"File not found: {file_path}")
+            except IOError as e:
+                print(f"IOError occurred: {e}")
+
+        
         with col2:
             st_lottie(lottie_coding, height=300)
     st.write("---")
