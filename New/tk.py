@@ -71,20 +71,20 @@ if selected=='About':
                      Graduate with an aptitude for aptitude and passion for Continuous Learning.
                      Eager to contribute to collaborative and impactful Software development projects and drive innovation in field""")
             st.subheader("Resume")
-            file_path = "web/Mohamed Tharik.PDF"  # Replace with your actual file path
+            file_path = "Mohamed Tharik.pdf"  # Replace with your actual file path
             if os.path.exists(file_path):
                 print("File exists.")
             else:
                 print("File does not exist.")
             print(f"Current working directory: {os.getcwd()}")
             base_dir = os.path.dirname(__file__)  # Get the directory of the script
-            file_path = os.path.join(base_dir, "web/Mohamed Tharik.PDF")  # Construct the file path
+            file_path = os.path.join(base_dir, "Mohamed Tharik.pdf")  # Construct the file path
 
             with open(file_path, "rb") as file:
                 st.download_button(
                     label="Download File",
                     data=file,
-                    file_name="Mohamed Tharik.PDF",
+                    file_name="Mohamed Tharik.pdf",
                     #mime="text/plain"  # Adjust MIME type based on your file
                 )
             file_path = "path/to/your/file"
