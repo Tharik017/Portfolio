@@ -89,7 +89,7 @@ if selected=='About':
                     label="Download File",
                     data=file,
                     file_name="Mohamed Tharik.pdf",
-                    #mime="text/plain"  # Adjust MIME type based on your file
+                    mime="text/plain"  # Adjust MIME type based on your file
                 )
             except FileNotFoundError:
                 print(f"File not found: {file_path}")
