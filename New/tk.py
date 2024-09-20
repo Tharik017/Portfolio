@@ -243,7 +243,8 @@ if selected=='Contact':
         <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Send</button>
     </form>
 
-    <!-- Success and Error Messages -->
+<!-- Success and Error Messages -->
+
 <div id="responseMessage" style="display:none; padding: 10px; margin-top: 10px; border-radius: 4px;"></div>
 
 <script>
