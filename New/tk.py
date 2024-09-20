@@ -181,7 +181,7 @@ if selected=='Projects':
                  Recent advances in computer vision and machine learning techniques have made it possible 
                  to accurately detect, classify, and monitor plant diseases based on images of leaves.""")
             st.markdown("[Contact me...](dm.wa.link/e4r2ws)")
-            st.write("######")
+            st.write("###")
             st.write("---")
             st.write("###")
         with col5:
