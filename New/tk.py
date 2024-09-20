@@ -228,70 +228,64 @@ if selected=='Projects':
             st.write("###")
             st.write("---")
 
-if selected=='Contact':
+if selected == 'Contact':
     st.write("---")
     st.header("Get In Touch With Me!")
     st.write("##")
+    
+    # Custom CSS for styling the form and layout
+    st.markdown("""
+        <style>
+            .contact-form {
+                background-color: #f9f9f9;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+            .contact-form input, .contact-form textarea {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 16px;
+            }
+            .contact-form button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 18px;
+            }
+            .contact-form button:hover {
+                background-color: #45a049;
+            }
+        </style>
+    """, unsafe_allow_html=True)
 
-# HTML form from FormSubmit
+    # HTML form with updated styling
     contact_form = """
-        <form action="https://formsubmit.co/mhmdtharik017@gmail.com" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 8px; margin: 4px 0; border: 1px solid #ccc; border-radius: 4px;">
-        <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 8px; margin: 4px 0; border: 1px solid #ccc; border-radius: 4px;">
-        <textarea name="message" placeholder="Your message here" required style="width: 100%; padding: 8px; margin: 4px 0; border: 1px solid #ccc; border-radius: 4px;"></textarea>
-        <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Send</button>
-    </form>
+        <form action="https://formsubmit.co/mhmdtharik017@gmail.com" method="POST" class="contact-form">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your message here" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    """
 
-<!-- Success and Error Messages -->
-
-<div id="responseMessage" style="display:none; padding: 10px; margin-top: 10px; border-radius: 4px;"></div>
-
-<script>
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form submission
-        var form = event.target;
-        var formData = new FormData(form);
-
-        fetch(form.action, {
-            method: form.method,
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        }).then(function(response) {
-            if (response.ok) {
-                showMessage('Your message has been sent successfully!', 'success');
-                form.reset(); // Reset form after successful submission
-            } else {
-                showMessage('Oops! Something went wrong. Please try again later.', 'error');
-            }
-        }).catch(function(error) {
-            showMessage('Oops! Something went wrong. Please try again later.', 'error');
-        });
-    });
-
-    function showMessage(message, type) {
-        var responseMessage = document.getElementById('responseMessage');
-        responseMessage.style.display = 'block';
-        responseMessage.textContent = message;
-
-        if (type === 'success') {
-            responseMessage.style.backgroundColor = '#4CAF50';
-            responseMessage.style.color = 'white';
-        } else {
-            responseMessage.style.backgroundColor = '#f44336';
-            responseMessage.style.color = 'white';
-        }
-    }
-</script>
-"""
-# Create columns layout
+    # Create columns layout
     left_column, right_column = st.columns(2)
 
-# Display form in the left column
+    # Display form in the left column
     with left_column:
         st.markdown(contact_form, unsafe_allow_html=True)
-    with right_column:
 
+    # Display animation or visual in the right column
+    with right_column:
         st_lottie(lottie_code, height=300)
+
+    # Adding a space before footer
+    st.write("##")
