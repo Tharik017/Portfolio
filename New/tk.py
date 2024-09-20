@@ -181,10 +181,11 @@ if selected=='Projects':
                  Recent advances in computer vision and machine learning techniques have made it possible 
                  to accurately detect, classify, and monitor plant diseases based on images of leaves.""")
             st.markdown("[Contact me...](dm.wa.link/e4r2ws)")
-            st.write("###")
+            st.write("#####")
             st.write("---")
-            st.write("###")
+            st.write("#####")
         with col5:
+            st.write("#####")
             st.subheader("Online Grocery Store")
             if 'image2' in locals():
                 st.image(image2)
@@ -199,12 +200,13 @@ if selected=='Projects':
                  This system divided in to three main categories: cashier/stock management, supplier information management/generating report, staff management00.
                  This application will provide the basic features such as cashier to handle sales transaction, stock management to control.""")
             st.markdown("[Contact me...](dm.wa.link/e4r2ws)")
-            st.write("###")
+            st.write("#####")
             st.write("---")
-            st.write("###")
+            st.write("#####")
 
 
         with col5:
+            st.write("#####")
             st.subheader("Eye Bank Management")
             if 'image3' in locals():
                 st.image(image3)
