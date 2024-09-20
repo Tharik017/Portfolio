@@ -172,7 +172,7 @@ if selected=='Projects':
                 st.image(image1)
             else:
                 st.warning("Image not loaded.")
-            st.write("---")
+            
             st.write("###")
         with col6:
             st.subheader("The development of plant disease detection, to recognize the disease and suggesting a remedy to it")
@@ -181,7 +181,7 @@ if selected=='Projects':
                  Recent advances in computer vision and machine learning techniques have made it possible 
                  to accurately detect, classify, and monitor plant diseases based on images of leaves.""")
             st.markdown("[Contact me...](dm.wa.link/e4r2ws)")
-            st.write("######")
+            st.write("###")
             st.write("---")
             st.write("###")
         with col5:
@@ -190,7 +190,7 @@ if selected=='Projects':
                 st.image(image2)
             else:
                 st.warning("Image not loaded.")
-            st.write("---")
+            
             st.write("###")
         with col6:
             st.subheader("The development of an online grocery, to track offer and availability of an item in the market")
@@ -199,7 +199,7 @@ if selected=='Projects':
                  This system divided in to three main categories: cashier/stock management, supplier information management/generating report, staff management00.
                  This application will provide the basic features such as cashier to handle sales transaction, stock management to control.""")
             st.markdown("[Contact me...](dm.wa.link/e4r2ws)")
-            st.write("######")
+            st.write("###")
             st.write("---")
             st.write("###")
 
@@ -210,7 +210,7 @@ if selected=='Projects':
                 st.image(image3)
             else:
                 st.warning("Image not loaded.")
-            st.write("---")
+            
             st.write("#####")
 
         with col6:
@@ -220,7 +220,7 @@ if selected=='Projects':
                   So every effort is taken to implement this project in this Eye Bank, on successful implementation in this Eye Bank, 
                   we can target other Eye Banks in the city""")
             st.markdown("[Contact me...](dm.wa.link/e4r2ws)")
-            st.write("##")
+            st.write("###")
             st.write("---")
 
 if selected=='Contact':
