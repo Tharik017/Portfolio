@@ -186,6 +186,7 @@ if selected=='Projects':
             st.write("#####")
         with col5:
             st.write("###")
+            st.write("###")
             st.subheader("Online Grocery Store")
             if 'image2' in locals():
                 st.image(image2)
@@ -206,7 +207,8 @@ if selected=='Projects':
 
 
         with col5:
-            st.write("##")
+            st.write("###")
+            st.write("###")
             st.subheader("Eye Bank Management")
             if 'image3' in locals():
                 st.image(image3)
