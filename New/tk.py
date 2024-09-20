@@ -136,12 +136,13 @@ if selected=='About':
             st.write("###")
         with col6:
              with open(certificate1, "rb") as file:
-                st.download_button(
-                label="Download File",
-                data=file,
-                file_name="google certificate.PDF",
-                mime="text/plain"  # Adjust MIME type based on your file
-                )
+                 st.write("###")
+                 st.download_button(
+                 label="Download File",
+                 data=file,
+                 file_name="google certificate.PDF",
+                 mime="text/plain"  # Adjust MIME type based on your file
+                 )
         
         col7,col8=st.columns(2)
         with col7:
@@ -149,6 +150,7 @@ if selected=='About':
               st.write("###")
         with col8:
             with open(certificate2, "rb") as file:
+                st.write("###")
                 st.download_button(
                 label="Download File",
                 data=file,
