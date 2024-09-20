@@ -242,6 +242,48 @@ if selected=='Contact':
         <textarea name="message" placeholder="Your message here" required style="width: 100%; padding: 8px; margin: 4px 0; border: 1px solid #ccc; border-radius: 4px;"></textarea>
         <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Send</button>
     </form>
+
+    <!-- Success and Error Messages -->
+<div id="responseMessage" style="display:none; padding: 10px; margin-top: 10px; border-radius: 4px;"></div>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+        var form = event.target;
+        var formData = new FormData(form);
+
+        fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(function(response) {
+            if (response.ok) {
+                showMessage('Your message has been sent successfully!', 'success');
+                form.reset(); // Reset form after successful submission
+            } else {
+                showMessage('Oops! Something went wrong. Please try again later.', 'error');
+            }
+        }).catch(function(error) {
+            showMessage('Oops! Something went wrong. Please try again later.', 'error');
+        });
+    });
+
+    function showMessage(message, type) {
+        var responseMessage = document.getElementById('responseMessage');
+        responseMessage.style.display = 'block';
+        responseMessage.textContent = message;
+
+        if (type === 'success') {
+            responseMessage.style.backgroundColor = '#4CAF50';
+            responseMessage.style.color = 'white';
+        } else {
+            responseMessage.style.backgroundColor = '#f44336';
+            responseMessage.style.color = 'white';
+        }
+    }
+</script>
 """
 # Create columns layout
     left_column, right_column = st.columns(2)
