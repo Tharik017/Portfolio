@@ -233,14 +233,15 @@ if selected == 'Contact':
     st.header("Get In Touch With Me!")
     st.write("##")
     
-    # Custom CSS for styling the form and layout
+    # Custom CSS for styling the form and layout with violet background
     st.markdown("""
         <style>
             .contact-form {
-                background-color: #f9f9f9;
+                background-color: #8A2BE2; /* Violet background color */
                 padding: 20px;
                 border-radius: 8px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                color: white;
             }
             .contact-form input, .contact-form textarea {
                 width: 100%;
@@ -249,6 +250,7 @@ if selected == 'Contact':
                 border: 1px solid #ccc;
                 border-radius: 4px;
                 font-size: 16px;
+                color: #333;
             }
             .contact-form button {
                 background-color: #4CAF50;
@@ -265,7 +267,7 @@ if selected == 'Contact':
         </style>
     """, unsafe_allow_html=True)
 
-    # HTML form with updated styling
+    # HTML form with violet background styling
     contact_form = """
         <form action="https://formsubmit.co/mhmdtharik017@gmail.com" method="POST" class="contact-form">
             <input type="hidden" name="_captcha" value="false">
