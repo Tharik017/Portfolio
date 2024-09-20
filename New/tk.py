@@ -47,7 +47,7 @@ st.write("##")
 st.header("I am Mohamed Tharik☺")
 st.subheader("Hey Everyone!:wave:")
 st.write(" I am  passionate about finding ways to use python to effective in modern world")
-st.markdown("[Know more>>](dm.wa.link/e4r2ws)")
+st.markdown("[Know more>>](https://wa.link/ak766u)")
 
 with st.container():
     selected=option_menu(
