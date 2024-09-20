@@ -81,6 +81,8 @@ if selected=='About':
 
                 
             file_path = "New/web/Mohamed Tharik.pdf"
+            certificate1="New/google certificate.pdf"
+            certificate2="New/meta certificate.pdf"
 
             try:
                 with open(file_path, "rb") as file:
