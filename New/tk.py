@@ -173,7 +173,7 @@ if selected=='Projects':
             else:
                 st.warning("Image not loaded.")
             st.write("---")
-            st.write("###")
+            st.write("#####")
         with col6:
             st.subheader("The development of plant disease detection, to recognize the disease and suggesting a remedy to it")
             st.write("""
