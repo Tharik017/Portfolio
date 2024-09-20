@@ -244,6 +244,7 @@ if selected == 'Contact':
                 color: white;
             }
             .contact-form input, .contact-form textarea {
+                background-color: white;
                 width: 100%;
                 padding: 10px;
                 margin: 10px 0;
