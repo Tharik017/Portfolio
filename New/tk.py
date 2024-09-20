@@ -243,10 +243,6 @@ if selected=='Contact':
         <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Send</button>
     </form>
 """
-    if selectected="submit":
-        st.success("Your feedback or questions submitted successfully")
-    else:
-        st.warning("Cant take action at the moment")
 # Create columns layout
     left_column, right_column = st.columns(2)
 
