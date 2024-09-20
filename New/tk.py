@@ -127,33 +127,34 @@ if selected=='About':
             st.subheader("SSLC")
             st.write("TPKN Matric Higher Secondary School(2017)")
             st.write("Percentage = 97%")
-
-            st.header("Certifications:")
+        with st.container():
             col5,col6=st.columns(2)
-            with col5:
-                   st.write("1.Crash Course on Python provided by Google on Coursera")
-                   st.write("###")
-            with col6:
-                with open(certificate1, "rb") as file:
-                    st.download_button(
-                    label="Download File",
-                    data=file,
-                    file_name="google certificate.PDF",
-                    mime="text/plain"  # Adjust MIME type based on your file
-                    )
+        with col5:
+            st.header("Certifications:")
             
-            col7,col8=st.columns(2)
-            with col7:
-                  st.write("2.Programming In Python provided by Meta on Coursera")
-                  st.write("###")
-            with col8:
-                with open(certificate2, "rb") as file:
-                    st.download_button(
-                    label="Download File",
-                    data=file,
-                    file_name="meta certificate.PDF",
-                    mime="text/plain"  # Adjust MIME type based on your file
-                    )
+            st.write("1.Crash Course on Python provided by Google on Coursera")
+            st.write("###")
+        with col6:
+             with open(certificate1, "rb") as file:
+                st.download_button(
+                label="Download File",
+                data=file,
+                file_name="google certificate.PDF",
+                mime="text/plain"  # Adjust MIME type based on your file
+                )
+        
+        col7,col8=st.columns(2)
+        with col7:
+              st.write("2.Programming In Python provided by Meta on Coursera")
+              st.write("###")
+        with col8:
+            with open(certificate2, "rb") as file:
+                st.download_button(
+                label="Download File",
+                data=file,
+                file_name="meta certificate.PDF",
+                mime="text/plain"  # Adjust MIME type based on your file
+                )
 
 
 
