@@ -101,7 +101,6 @@ except FileNotFoundError:
 except IOError:
     print("Error occurred while opening the file.")
 
-st.write("##")
 st.header("I am Mohamed Tharik☺")
 st.subheader("Hey Everyone!:wave:")
 st.write(" I am  passionate about finding ways to use python to effective in modern world")
