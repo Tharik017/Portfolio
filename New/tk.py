@@ -7,6 +7,16 @@ import os
 import base64
 
 st.set_page_config(page_title="Tharik", page_icon=":tada:", layout="wide")
+st.markdown(
+    """
+    <style>
+    /* Change background color */
+    .stApp {
+        background-color: #000000;  /* Light grey background */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True)
 
 #function to define lottie animation 
 def load_lottieurl(url):
