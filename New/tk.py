@@ -22,7 +22,7 @@ st.markdown(
 
     /* Button hover effect */
     .stButton>button:hover {
-        background-color: #b2ff33; /* Lighter shade on hover */
+        background-color: #ff3383; /* Lighter shade on hover */
     }
 
     /* Background color for the main content area */
@@ -38,7 +38,7 @@ st.markdown(
 
     /* Custom color for the download button */
     .stDownloadButton>button {
-        background-color: #b2ff33; /* Green color for download button */
+        background-color: #ff3383; /* Green color for download button */
         color: #000000; /* Text color for download button */
     }
 
