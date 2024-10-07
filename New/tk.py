@@ -20,6 +20,9 @@ st.markdown(
     .stButton>button:hover {
         background-color: #FF7849;
     }
+    .stDropdown>div [class^="css-"] {
+        background-color: #FF5733;
+    }
     </style>
     """,
     unsafe_allow_html=True)
