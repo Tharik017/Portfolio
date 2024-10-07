@@ -88,7 +88,7 @@ if selected=='About':
                 with open(file_path, "rb") as file:
                     st.download_button(
                     label="Download File",
-                    key="green"
+                    key="green",
                     data=file,
                     file_name="Mohamed Tharik.pdf",
                     mime="text/plain"  # Adjust MIME type based on your file
