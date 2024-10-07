@@ -14,8 +14,6 @@ st.markdown(
     .lottie-container {
         background-color: transparent; /* Make the background transparent */
         display: flex;
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
     }
     /* Primary accent for interactive elements */
     .stButton>button {
