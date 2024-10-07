@@ -119,7 +119,7 @@ if selected=='About':
     with st.container():
         col1,col2=st.columns(2)
         with col1:
-            st.write("##")
+            #st.write("##")
             st.title("I am Mohamed Tharik:wave:")
             st.subheader("Profile Summary")
             st.write(""" 
