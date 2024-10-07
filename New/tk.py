@@ -159,7 +159,7 @@ if selected=='About':
         
         with col2:
             st.markdown("<div class='lottie-container'>", unsafe_allow_html=True)
-            st_lottie(lottie_coding, height=300)
+            st_lottie(lottie_coding, height=300, key="code")
             st.markdown("</div>", unsafe_allow_html=True)
 
             st.write("---")
