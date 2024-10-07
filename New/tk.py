@@ -7,8 +7,6 @@ import os
 import base64
 
 st.set_page_config(page_title="Tharik", page_icon=":tada:", layout="wide")
-os.environ['http_proxy'] = 'http://proxy.company.com:8502'
-os.environ['https_proxy'] = 'http://proxy.company.com:8502'
 
 st.markdown(
     """
@@ -162,20 +160,17 @@ if selected=='About':
         with col2:
             st.markdown("<div class='lottie-container'>", unsafe_allow_html=True)
             st_lottie(lottie_coding, height=300)
-            st.markdown("</div>", unsafe_allow_html=True)
             st.write("---")
 
         with st.container():
             col3,col4=st.columns(2)
         with col3:
             st.header("Education-College")
-            
             st.subheader("Post Graduate")
             st.write("M.Sc - Computer Science")
             st.write ("2022 - 2024")
             st.write("GTN arts and science college") 
             st.write("CGPA – 7")
-
             st.subheader("Under Graduate")
             st.write("B.Sc - Computer Science") 
             st.write("2019 - 2022")
@@ -186,7 +181,6 @@ if selected=='About':
             st.subheader("Higher Secondary")
             st.write("CSMA Higher Secondary School(2019)")
             st.write("Percentage = 47%")
-
             st.subheader("SSLC")
             st.write("TPKN Matric Higher Secondary School(2017)")
             st.write("Percentage = 97%")
@@ -194,7 +188,6 @@ if selected=='About':
             col5,col6=st.columns(2)
         with col5:
             st.header("Certifications:")
-            
             st.write("1.Crash Course on Python provided by Google on Coursera")
             st.write("###")
         with col6:
