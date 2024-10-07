@@ -36,6 +36,16 @@ st.markdown(
         background-color: #0083B8; /* Sidebar background color */
     }
 
+    /* Custom color for the download button */
+    .stDownloadButton>button {
+        background-color: #b2ff33; /* Green color for download button */
+        color: #000000; /* Text color for download button */
+    }
+
+    /* Download button hover effect */
+    .stDownloadButton>button:hover {
+        background-color: #a8e03b; /* Slightly darker shade on hover */
+    }
     /* Color for all text */
     h1, h2, h3, h4, h5, h6, p {
         color: #FFFFFF; /* All text color */
