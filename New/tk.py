@@ -22,7 +22,7 @@ st.markdown(
 
     /* Button hover effect */
     .stButton>button:hover {
-        background-color: #D781E1; /* Lighter shade on hover */
+        background-color: #b2ff33; /* Lighter shade on hover */
     }
 
     /* Background color for the main content area */
