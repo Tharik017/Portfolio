@@ -7,6 +7,9 @@ import os
 import base64
 
 st.set_page_config(page_title="Tharik", page_icon=":tada:", layout="wide")
+os.environ['http_proxy'] = 'http://proxy.company.com:8502'
+os.environ['https_proxy'] = 'http://proxy.company.com:8502'
+
 st.markdown(
     """
     <style>
