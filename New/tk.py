@@ -14,6 +14,9 @@ st.markdown(
     .stApp {
         background-color: #00172B; 
     }
+    .stSlider>div[data-baseweb="slider"] > div {
+        background: #FF5733;
+    }
     </style>
     """,
     unsafe_allow_html=True)
