@@ -10,22 +10,45 @@ st.set_page_config(page_title="Tharik", page_icon=":tada:", layout="wide")
 st.markdown(
     """
     <style>
-    /* Change background color */
-    .stApp {
-        background-color: #00172B; 
+    /* Primary accent for interactive elements */
+    .stButton>button {
+        background-color: #E694FF; /* Primary color */
+        color: #FFFFFF; /* Text color */
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
     }
-    .stSlider>div[data-baseweb="slider"] > div {
-        background: #FF5733;
-    }
+
+    /* Button hover effect */
     .stButton>button:hover {
-        background-color: #FF7849;
+        background-color: #D781E1; /* Lighter shade on hover */
     }
-    .stDropdown>div [class^="css-"] {
-        background-color: #FF5733;
+
+    /* Background color for the main content area */
+    .stApp {
+        background-color: #00172B; /* Main background color */
+        color: #FFFFFF; /* Text color */
+    }
+
+    /* Background color for sidebar */
+    .css-1d391kg { /* This class may vary, inspect the sidebar element to confirm */
+        background-color: #0083B8; /* Sidebar background color */
+    }
+
+    /* Color for all text */
+    h1, h2, h3, h4, h5, h6, p {
+        color: #FFFFFF; /* All text color */
+    }
+
+    /* Font family for all text */
+    body, h1, h2, h3, h4, h5, h6, p {
+        font-family: "sans serif"; /* Set font family */
     }
     </style>
     """,
-    unsafe_allow_html=True)
+    unsafe_allow_html=True
+)
 
 #function to define lottie animation 
 def load_lottieurl(url):
