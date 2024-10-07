@@ -10,6 +10,13 @@ st.set_page_config(page_title="Tharik", page_icon=":tada:", layout="wide")
 st.markdown(
     """
     <style>
+    /* Custom CSS to blend Lottie animations with the app */
+    .lottie-container {
+        background-color: transparent; /* Make the background transparent */
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+    }
     /* Primary accent for interactive elements */
     .stButton>button {
         background-color: #E694FF; /* Primary color */
