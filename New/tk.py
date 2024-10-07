@@ -84,18 +84,38 @@ if selected=='About':
             certificate1="New/google certificate.pdf"
             certificate2="New/meta certificate.pdf"
 
-            try:
-                with open(file_path, "rb") as file:
-                    st.download_button(
-                    label="Download File",
-                    data=file,
-                    file_name="Mohamed Tharik.pdf",
-                    mime="text/plain"  # Adjust MIME type based on your file
-                )
-            except FileNotFoundError:
-                print(f"File not found: {file_path}")
-            except IOError as e:
-                print(f"IOError occurred: {e}")
+            file_path = "New/web/Mohamed Tharik.PDF"
+            with open(file_path, "rb") as file:
+                file_data = file.read()
+
+            # Inject custom CSS for the download button
+            st.markdown("""
+                <style>
+                .download-button {
+                    background-color: #4CAF50;
+                    color: white;
+                    padding: 12px 28px;
+                    font-size: 16px;
+                    border: none;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                    text-decoration: none;
+                    text-align: center;
+                    display: inline-block;
+                }
+                .download-button:hover {
+                    background-color: #45a049;
+                }
+                </style>
+                """, unsafe_allow_html=True)
+
+            # Custom download button using HTML
+            st.markdown(f"""
+                <a href="data:application/octet-stream;base64,{base64.b64encode(file_data).decode()}" download="Mohamed Tharik.PDF">
+                    <div class="download-button">Download File</div>
+                </a>
+                """, unsafe_allow_html=True)
 
         
         with col2:
