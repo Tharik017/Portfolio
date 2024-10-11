@@ -10,12 +10,12 @@ st.set_page_config(page_title="Tharik", page_icon=":tada:", layout="wide")
 
 hide_streamlit_style = """
     <style>
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
+    #MainMenu {visibility: hidden;} /* Hide the Streamlit menu */
+    footer {visibility: hidden;} /* Hide the entire footer */
+    .stApp { margin-bottom: 0px; } /* Adjust app layout */
     </style>
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
