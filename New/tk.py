@@ -8,6 +8,15 @@ import base64
 
 st.set_page_config(page_title="Tharik", page_icon=":tada:", layout="wide")
 
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
 st.markdown(
     """
     <style>
