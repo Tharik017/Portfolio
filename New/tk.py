@@ -264,8 +264,6 @@ if selected=='Projects':
 
         with col5:
             st.write("###")
-            st.write("###")
-            st.write("###")
             st.subheader("Eye Bank Management")
             if 'image3' in locals():
                 st.image(image3)
