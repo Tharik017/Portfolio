@@ -9,15 +9,15 @@ import base64
 st.set_page_config(page_title="Tharik", page_icon=":tada:", layout="wide")
 
 
-hide_st_style = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            header {visibility: hidden;}
-            </style>
-            """
-st.markdown(hide_st_style, unsafe_allow_html=True)
-
+# Inject custom CSS to hide "Manage app" button and footer
+hide_streamlit_style = """
+    <style>
+    #MainMenu {visibility: hidden;} /* Hide the Streamlit main menu */
+    footer {visibility: hidden;} /* Hide the footer */
+    header {visibility: hidden;} /* Hide the "Manage app" button */
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 st.markdown(
     """
     <style>
