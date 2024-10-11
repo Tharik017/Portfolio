@@ -243,7 +243,6 @@ if selected=='Projects':
             st.write("#####")
         with col5:
             st.write("###")
-            st.write("###")
             st.subheader("Online Grocery Store")
             if 'image2' in locals():
                 st.image(image2)
